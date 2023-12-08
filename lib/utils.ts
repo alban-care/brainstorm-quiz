@@ -1,5 +1,7 @@
+const API_URL = "https://alban-care.github.io/data/brainstorm-quiz";
+
 export const getCategories = async () => {
-  const path = "../data/categories.json";
+  const path = `${API_URL}/categories.json`;
   const response = await fetch(path);
 
   return response.json();
@@ -12,7 +14,7 @@ export const getQuestionsByCategory = async (
   const count = await getCountCategory(category);
   const shuffleArray = createShuffleArray(0, count, length);
 
-  const path = `../data/${category}.json`;
+  const path = `${API_URL}/${category}.json`;
   const response = await fetch(path);
   const data = await response.json();
 
@@ -35,7 +37,7 @@ export const getQuestionsByCategory = async (
 };
 
 const getCountCategory = async (category: string) => {
-  const path = `../data/${category}.json`;
+  const path = `${API_URL}/${category}.json`;
   const response = await fetch(path);
   const data = await response.json();
 

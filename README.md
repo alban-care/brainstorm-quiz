@@ -1,30 +1,12 @@
-# React + TypeScript + Vite
+# Brainstorm Quiz Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+You can test the game here: https://alban-care.github.io/brainstorm-quiz/
 
-Currently, two official plugins are available:
+## Rules of the game
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The game is a quiz game where you have to answer questions. This is inspired by the Trivial Pursuit game. The goal is to answer correctly to all the questions of the game in different categories.
 
-## Expanding the ESLint configuration
+## Dev explanation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+In this game, i don't use state management like Redux or Mobx. I use the Context API of React to manage the state of the game. I use the Context API because the game is not very complex and i don't need to use a state management library.
+The data is provided in JSON format directly in the data directory. It's a simple JSON file with an array of questions, but it is envisaged that in the future I will develop an API to serve the different applications that I have fun creating in my Github repository. 😅
